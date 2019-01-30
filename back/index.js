@@ -11,7 +11,10 @@ server.applyMiddleware({ app });
 consign({
   cwd: __dirname
 })
-  .include('./libs/middlewares.js')
+  .include('./libs/config.js')
+  .then('./db.js')
+  .then('./libs/middlewares.js')
+  .then('./routes')
   .then('./libs/boot.js')
   .into(app)
 
