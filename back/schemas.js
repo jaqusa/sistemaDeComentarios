@@ -1,5 +1,8 @@
 export default `
-type Query {
-  hello: String
-}
+
+  type Query {
+    hello: String
+  }
+
+  
 `;

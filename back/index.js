@@ -1,17 +1,24 @@
-const express = require('express');
-const { ApolloServer, gql } = require('apollo-server-express');
-
+import express from 'express'
+import {ApolloServer,gql} from 'apollo-server-express'
+import consign from 'consign'
 import typeDefs from "./schemas"
 import resolvers from "./resolvers"
 
-
-const server = new ApolloServer({ typeDefs, resolvers });
-
 const app = express();
+const server = new ApolloServer({ typeDefs, resolvers });
 server.applyMiddleware({ app });
 
-const port = 3000;
+consign({
+  cwd: __dirname
+})
+  .include('./libs/middlewares.js')
+  .then('./libs/boot.js')
+  .into(app)
 
-app.listen({ port }, () =>
-  console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`),
-);
+
+
+
+
+
+
+
