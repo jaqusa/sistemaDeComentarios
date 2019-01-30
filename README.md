@@ -1,3 +1,3 @@
 # sistemaDeComentarios
 
-built with Node, GraphQL, Apollo, Sequelize
+Built with Node, GraphQL, Apollo, Sequelize and use Sqlite how DB
