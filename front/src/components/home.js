@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   Comment, Form, Button, List, Input,
 } from 'antd';
-import moment from 'moment';
+import {Query} from 'react-apollo'
+import gql from "graphql-tag";
 
 const TextArea = Input.TextArea;
 
@@ -47,7 +48,8 @@ const Editor = ({
 
 
 class Home extends Component {
-
+  
+  
 
   state = {
     comments: [],
@@ -86,6 +88,7 @@ class Home extends Component {
 
 
   render(){
+    
     const { comments, submitting, value } = this.state;
 
     return (

@@ -1,12 +1,12 @@
 import React from 'react'
 import {Route,Switch} from 'react-router-dom'
-import Home from './components/home';
-
-
+import Home from './components/home'
+import Db from './components/db'
  
 const Routes = ()=>(
   <Switch>
-    <Route path="/" component={Home} />
+    <Route exact path="/" component={Home} />
+    <Route exact path="/db" component={Db}/>
   </Switch>
 )
  
