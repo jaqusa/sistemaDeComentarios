@@ -10,8 +10,8 @@ export default `
   }
 
   type Mutation{
-    createComment(content:String!):Comment!
-    deleteComment(id:ID!):Comment
+    createComment(content:String!):Boolean!
+    deleteComment(id:ID!):Boolean!
   }
 
   

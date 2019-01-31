@@ -3,7 +3,7 @@ export default {
     allComments:(parent,args,{Comments})=> Comments.findAll()
   },
   Mutation:{
-    createComment:(parents,args,{Comments})=> Comments.create(args),
-    deleteComment:(parents,args,{Comments})=> Comments.destroy({where:args})
+    createComment:(parents,args,{Comments})=>{ return Comments.create(args)},
+    deleteComment:(parents,args,{Comments})=>{ return Comments.destroy({where:args})}
   }
 }
