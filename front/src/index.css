@@ -1,32 +1,35 @@
 
 ul {
-  margin: 0;
+  margin: 10px;
   padding: 2px;
   list-style-type: none;
-  text-align: center;
+  background-color: bisque;
+  justify-content:center;
 }
 
-li {
-  margin: 5px;
-  padding: 5px;  
+p {
+  margin: 10px;
+  padding: 10px; 
+  
 }
 
 button{
   border-radius: 10px;
-  margin: 10px;
+
 }
 .center{
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px; 
   padding: 20px;
+ 
 
 }
 .delete{
   margin-left: 100px;
   background-color:#d71e18;
   color: aliceblue;
-  float: left;
+  float: right;
 }
 .submit{
   width: 100px;

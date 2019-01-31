@@ -2,7 +2,9 @@ import React from 'react'
 import {Route,Switch} from 'react-router-dom'
 import ListComments from './components/listComments';
 import AddComments from './components/addComments';
- 
+//import Home from './components/home';
+
+
 const Routes = ()=>(
   <Switch>
     <Route exact path="/" render={props =>
@@ -14,6 +16,7 @@ const Routes = ()=>(
         </div>
       </div>
     } />
+    {/* <Route path="/test" component = {Home} /> */}
   </Switch>
 )
  

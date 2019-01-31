@@ -31,18 +31,19 @@ render(){
     if (error) return <p>Error :${error.message}(</p>;
      
 
-      
+    
     return data.allComments.map( (comment) => (
-      //console.log(comment)
+
       <Mutation mutation={eraseComment}>
        { (deleteComment,{data}) => (
         <ul>
-          <li>
+          <li key={comment.id}>
           {comment.content}
-          <button  class="delete" onClick={ e => { 
+          
+          <button  className="delete" onClick={ e => { 
              
               deleteComment({variables:{id:comment.id}})
-              
+              window.location.reload()
           }}> 
               Delete
           </button>

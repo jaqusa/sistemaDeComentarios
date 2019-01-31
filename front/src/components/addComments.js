@@ -17,9 +17,13 @@ const addComment = gql`
 
 
 class addComments extends Component {
-  state={
-    content:""
-  }
+constructor(){
+  super()
+  this.setState({
+    content:"",
+    comments:[]
+  })
+}
 
   handleChange = (e) =>{
     const content = e.target.value
@@ -32,10 +36,9 @@ render() {
   return (
     <Mutation mutation={addComment}>
     {(createComment,{data})=>(
-       <Form className="center" onSubmit = { e =>{
-         
-         createComment({variables:{content:this.state.content}})
-         
+       <Form className="center"  onSubmit = { e => {
+          createComment({variables:{content:this.state.content}})
+         this.setState({content:" "})
         }
        } >
           <Form.Item
